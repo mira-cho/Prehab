@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functional Mobility & Prehab Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        .subsection {
+            margin-bottom: 35px;
+        }
+        
+        .subsection-title {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 5px solid #3498db;
+            background: linear-gradient(90deg, rgba(52, 152, 219, 0.1), transparent);
+            padding: 10px 0 10px 20px;
+        }
+        
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .exercise-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #3498db;
+        }
+        
+        .exercise-name {
+            color: #2c3e50;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .exercise-description {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .exercise-sketch {
+            width: 100%;
+            height: 120px;
+            background: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sketch-placeholder {
+            color: #bdc3c7;
+            font-size: 0.8em;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .exercise-sketch svg {
+            width: 90%;
+            height: 90%;
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .advanced { background: #e74c3c; }
+        .intermediate { background: #f39c12; }
+        .expert { background: #8e44ad; }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+        
+        .climbing { background: #e8f5e8; color: #27ae60; }
+        .strength { background: #fef9e7; color: #f39c12; }
+        .mobility { background: #e3f2fd; color: #2196f3; }
+        .stability { background: #f3e5f5; color: #9c27b0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏋️ Advanced Functional Mobility & Prehab Guide</h1>
+            <p>Cutting-edge exercises for climbers, athletes, and movement enthusiasts seeking superior mobility, strength, and injury prevention</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🔺 UPPER BODY</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">Pulling Movements</h3>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">Archer Pull-ups</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="50" cy="30" r="8" fill="#3498db"/>
+                                <line x1="50" y1="38" x2="50" y2="80" stroke="#3498db" stroke-width="3"/>
+                                <line x1="50" y1="45" x2="30" y2="25" stroke="#3498db" stroke-width="3"/>
+                                <line x1="50" y1="45" x2="80" y2="35" stroke="#3498db" stroke-width="3"/>
+                                <line x1="50" y1="80" x2="35" y2="100" stroke="#3498db" stroke-width="3"/>
+                                <line x1="50" y1="80" x2="65" y2="100" stroke="#3498db" stroke-width="3"/>
+                                <line x1="20" y1="20" x2="180" y2="20" stroke="#2c3e50" stroke-width="4"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">One arm straight, one bent</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Unilateral strength and shoulder stability - pull to one side while keeping opposite arm straight</p>
+                        <div class="tags">
+                            <span class="tag climbing">Climbing</span>
+                            <span class="tag strength">Strength</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">Typewriter Pull-ups</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="50" cy="30" r="8" fill="#e74c3c"/>
+                                <line x1="50" y1="38" x2="50" y2="80" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="50" y1="45" x2="30" y2="25" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="50" y1="45" x2="70" y2="35" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="50" y1="80" x2="35" y2="100" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="50" y1="80" x2="65" y2="100" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="20" y1="20" x2="180" y2="20" stroke="#2c3e50" stroke-width="4"/>
+                                <path d="M 70 35 Q 90 30 110 35" stroke="#f39c12" stroke-width="2" fill="none"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">Slide side to side at top</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Dynamic shoulder mobility and control - slide from side to side at the top of pull-up</p>
+                        <div class="tags">
+                            <span class="tag mobility">Mobility</span>
+                            <span class="tag strength">Strength</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <h4 class="exercise-name">Ring Face Pulls</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="40" r="8" fill="#27ae60"/>
+                                <line x1="100" y1="48" x2="100" y2="80" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="70" y2="45" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="130" y2="45" stroke="#27ae60" stroke-width="3"/>
+                                <circle cx="70" cy="45" r="8" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                <circle cx="130" cy="45" r="8" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                <line x1="100" y1="80" x2="85" y2="100" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="80" x2="115" y2="100" stroke="#27ae60" stroke-width="3"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">Pull rings to face</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Posterior chain activation and shoulder health - essential for balanced pulling</p>
+                        <div class="tags">
+                            <span class="tag stability">Stability</span>
+                            <span class="tag mobility">Mobility</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <h4 class="exercise-name">Single Arm Ring Rows</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="80" cy="40" r="8" fill="#9b59b6"/>
+                                <line x1="80" y1="48" x2="130" y2="80" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="80" y1="55" x2="60" y2="45" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="130" y1="80" x2="120" y2="100" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="130" y1="80" x2="140" y2="100" stroke="#9b59b6" stroke-width="3"/>
+                                <circle cx="60" cy="45" r="8" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                <line x1="50" y1="40" x2="70" y2="50" stroke="#f39c12" stroke-width="2"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">One arm row, lean back</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Unilateral pulling with core integration - builds functional pulling strength</p>
+                        <div class="tags">
+                            <span class="tag climbing">Climbing</span>
+                            <span class="tag stability">Stability</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge expert">Expert</div>
+                        <h4 class="exercise-name">Hanging Windshield Wipers</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="25" r="8" fill="#e67e22"/>
+                                <line x1="100" y1="33" x2="100" y2="65" stroke="#e67e22" stroke-width="3"/>
+                                <line x1="100" y1="40" x2="85" y2="20" stroke="#e67e22" stroke-width="3"/>
+                                <line x1="100" y1="40" x2="115" y2="20" stroke="#e67e22" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="80" y2="85" stroke="#e67e22" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="120" y2="85" stroke="#e67e22" stroke-width="3"/>
+                                <line x1="70" y1="15" x2="130" y2="15" stroke="#2c3e50" stroke-width="4"/>
+                                <path d="M 80 85 Q 100 95 120 85" stroke="#f39c12" stroke-width="2" fill="none"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">Legs side to side hanging</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Core rotational strength with grip endurance - advanced hanging core exercise</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                            <span class="tag climbing">Climbing</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">Commando Pull-ups</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="30" r="8" fill="#16a085"/>
+                                <line x1="100" y1="38" x2="100" y2="70" stroke="#16a085" stroke-width="3"/>
+                                <line x1="100" y1="45" x2="80" y2="25" stroke="#16a085" stroke-width="3"/>
+                                <line x1="100" y1="45" x2="120" y2="25" stroke="#16a085" stroke-width="3"/>
+                                <line x1="100" y1="70" x2="85" y2="90" stroke="#16a085" stroke-width="3"/>
+                                <line x1="100" y1="70" x2="115" y2="90" stroke="#16a085" stroke-width="3"/>
+                                <line x1="70" y1="20" x2="130" y2="20" stroke="#2c3e50" stroke-width="4"/>
+                                <path d="M 90 30 Q 100 25 110 30" stroke="#e74c3c" stroke-width="2" fill="none"/>
+                                <text x="100" y="105" text-anchor="middle" font-size="10" fill="#7f8c8d">Alternate sides over bar</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Multi-planar pulling with thoracic rotation - builds functional movement patterns</p>
+                        <div class="tags">
+                            <span class="tag mobility">Mobility</span>
+                            <span class="tag strength">Strength</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Pushing Movements</h3>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <h4 class="exercise-name">Handstand Wall Slides</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="80" r="8" fill="#3498db"/>
+                                <line x1="100" y1="72" x2="100" y2="40" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="85" y2="85" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="115" y2="85" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="40" x2="85" y2="20" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="40" x2="115" y2="20" stroke="#3498db" stroke-width="3"/>
+                                <rect x="10" y="15" width="5" height="90" fill="#2c3e50"/>
+                                <path d="M 85 20 L 85 30 L 115 30 L 115 20" stroke="#f39c12" stroke-width="2" fill="none"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">Slide up/down wall</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Shoulder mobility and overhead stability - fundamental handstand preparation</p>
+                        <div class="tags">
+                            <span class="tag mobility">Mobility</span>
+                            <span class="tag stability">Stability</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">Ring Push-up to T</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="50" r="8" fill="#e74c3c"/>
+                                <line x1="100" y1="58" x2="100" y2="80" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="70" y2="55" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="130" y2="55" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="80" x2="85" y2="100" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="80" x2="115" y2="100" stroke="#e74c3c" stroke-width="3"/>
+                                <circle cx="70" cy="55" r="8" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                <circle cx="130" cy="55" r="8" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">Push-up then T position</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Pushing with scapular retraction - builds balanced shoulder strength</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                            <span class="tag stability">Stability</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <h4 class="exercise-name">Pike Push-ups</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="60" r="8" fill="#27ae60"/>
+                                <line x1="100" y1="68" x2="130" y2="90" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="52" x2="80" y2="35" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="52" x2="120" y2="35" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="130" y1="90" x2="120" y2="105" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="130" y1="90" x2="140" y2="105" stroke="#27ae60" stroke-width="3"/>
+                                <path d="M 80 35 L 100 68 L 130 90" stroke="#f39c12" stroke-width="2" fill="none"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">Pike position push-up</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Vertical pressing preparation - builds overhead pushing strength</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge expert">Expert</div>
+                        <h4 class="exercise-name">Single Arm Push-ups</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="50" r="8" fill="#9b59b6"/>
+                                <line x1="100" y1="58" x2="100" y2="80" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="80" y2="55" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="100" y1="80" x2="85" y2="100" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="100" y1="80" x2="115" y2="100" stroke="#9b59b6" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="120" y2="75" stroke="#9b59b6" stroke-width="3" stroke-dasharray="3,3"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">One arm behind back</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Unilateral pressing strength - ultimate upper body pressing challenge</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                            <span class="tag stability">Stability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🦵 LOWER BODY</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">Hip-Dominant Movements</h3>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">Cossack Squats</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="40" r="8" fill="#3498db"/>
+                                <line x1="100" y1="48" x2="100" y2="70" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="85" y2="45" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="115" y2="45" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="70" x2="70" y2="90" stroke="#3498db" stroke-width="3"/>
+                                <line x1="100" y1="70" x2="150" y2="80" stroke="#3498db" stroke-width="3"/>
+                                <path d="M 70 90 L 60 100" stroke="#3498db" stroke-width="3"/>
+                                <path d="M 150 80 L 160 85" stroke="#3498db" stroke-width="3"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">Deep side lunge, one leg straight</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Lateral hip mobility and single-leg strength - essential for movement quality</p>
+                        <div class="tags">
+                            <span class="tag mobility">Mobility</span>
+                            <span class="tag strength">Strength</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge expert">Expert</div>
+                        <h4 class="exercise-name">Shrimp Squats</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="50" r="8" fill="#e74c3c"/>
+                                <line x1="100" y1="58" x2="100" y2="85" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="85" y2="55" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="65" x2="115" y2="55" stroke="#e74c3c" stroke-width="3"/>
+                                <line x1="100" y1="85" x2="90" y2="105" stroke="#e74c3c" stroke-width="3"/>
+                                <path d="M 100 85 Q 120 75 130 45" stroke="#e74c3c" stroke-width="3" fill="none"/>
+                                <text x="100" y="115" text-anchor="middle" font-size="10" fill="#7f8c8d">One leg squat, other behind</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Posterior chain flexibility with unilateral strength - advanced single leg squat</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                            <span class="tag mobility">Mobility</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <h4 class="exercise-name">Single-Leg Romanian Deadlifts</h4>
+                        <div class="exercise-sketch">
+                            <svg viewBox="0 0 200 120">
+                                <circle cx="100" cy="40" r="8" fill="#27ae60"/>
+                                <line x1="100" y1="48" x2="120" y2="70" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="85" y2="45" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="100" y1="55" x2="115" y2="45" stroke="#27ae60" stroke-width="3"/>
+                                <line x1="120" y1="70" x2="115" y2="85" stroke="#27ae60" stroke-width="3"/>
+                                <path d="M 120 70 Q 140 60 160 50" stroke="#27ae60" stroke-width="3" fill="none"/>
+                                <text x="100" y="110" text-anchor="middle" font-size="10" fill="#7f8c8d">Hinge at hip, leg back</text>
+                            </svg>
+                        </div>
+                        <p class="exercise-description">Hip hinge with balance challenge - builds posterior chain strength and stability</p>
+                        <div class="tags">
+                            <span class="tag strength">Strength</span>
+                            <span class="tag stability">Stability</span>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <h4 class="exercise-name">90/90 Hip Transitions</h4>
